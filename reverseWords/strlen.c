@@ -65,13 +65,16 @@ int main() {
 */
 
 int main() {
-  int a;
-  char hold;
-  char test[80], blah[80];
-  char *sep = " ";
+  //Variaveis
+  int a; //contador
+  char hold; //guarda a 1ª letra da troca
+  char test[80];//frase
+  char *sep = " ";//separador
   char *word, *phrase, *brkt, *brkb;
-  strcpy(test, "This is a test of the string tokenizer  function.");
+  strcpy(test, "94'3+ºã '21~ça  djanslkd +2º~");
+  //loop que lê palavra á palavra
   for (word = strtok_r(test, sep, &brkt); word; word = strtok_r(NULL, sep, &brkt)) {
+    //Inverte as letras da palavra
     while (a < strlen(word) / 2) {
     	hold = word[a];
     	word[a] = word[strlen(word) - 1 - a];
@@ -79,6 +82,7 @@ int main() {
     	a++;
   	}
     a = 0;
-    printf("So far we're at %s\n", word);     
+    printf("%s ", word);     
    }
- }
+  printf("\n");
+}
