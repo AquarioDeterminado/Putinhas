@@ -71,7 +71,7 @@ int main() {
   char test[80];//frase
   char *sep = " ";//separador
   char *word, *phrase, *brkt, *brkb;
-  strcpy(test, "94'3+ºã '21~ça  djanslkd +2º~");
+  strcpy(test, "P "9V m S%"");
   //loop que lê palavra á palavra
   for (word = strtok_r(test, sep, &brkt); word; word = strtok_r(NULL, sep, &brkt)) {
     //Inverte as letras da palavra
